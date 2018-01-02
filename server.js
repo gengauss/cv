@@ -20,6 +20,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/',index);
 
-app.listen(port, function(){
-	console.log('Server started on port '+port);
+app.listen(process.env.PORT || 3000, () => {
+	console.log("My CV!");
 });
